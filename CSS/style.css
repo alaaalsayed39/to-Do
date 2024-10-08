@@ -1,0 +1,66 @@
+:root {
+    --background-light: #FFE1FF;
+    --background-dark: #433878;
+    --text-light: #433878;
+    --text-dark: #FFE1FF;
+}
+
+/* Default theme (Light mode) */
+body {
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Pangolin', cursive;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+
+
+
+.card{
+    background-color: #ee67f753;
+    border: #433878;
+}
+.none{
+    display: none;
+}
+.invalid{
+    border: 1px solid red;
+}
+.checked{
+    background-color: #4b465e;
+    text-decoration: line-through;
+    color: aliceblue;
+}
+h1{
+font-weight: 900;
+font-size: 80px;
+font-family: 'Sigmar One', cursive;
+
+}
+
+
+
+.btn-info {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: #433878;
+    --bs-btn-border-color: #433878;
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: #433878;
+    --bs-btn-hover-border-color: #433878;
+    --bs-btn-focus-shadow-rgb: 11, 172, 204;
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: #433878;
+    --bs-btn-active-border-color: #433878;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #ffffff;
+    --bs-btn-disabled-bg: #433878;
+    --bs-btn-disabled-border-color: #433878;
+    font-family: 'Pangolin', cursive;
+}
+
