@@ -19,9 +19,6 @@ body.dark-mode {
     color: var(--text-dark);
 }
 
-
-
-
 .card{
     background-color: #ee67f753;
     border: #433878;
@@ -43,9 +40,6 @@ font-size: 80px;
 font-family: 'Sigmar One', cursive;
 
 }
-
-
-
 .btn-info {
     --bs-btn-color: #ffffff;
     --bs-btn-bg: #433878;

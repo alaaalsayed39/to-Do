@@ -38,11 +38,11 @@ let checkEmptyTasks = () => {
   if (allTasks.children.length == 0) {
     emtyTask.classList.remove("none");
     deleteAll.classList.add("none");
-    checkedNumber.classList.add("d-none");
+    checkedNumber.classList.add("none");
   } else {
     emtyTask.classList.add("none");
     deleteAll.classList.remove("none");
-    checkedNumber.classList.remove("d-none");
+    checkedNumber.classList.remove("none");
     updateCounts();
   }
 };
@@ -58,6 +58,7 @@ let addTask = (e) => {
     taskInput.classList.remove("invalid");
     emtyTask.classList.add("none");
     deleteAll.classList.remove("none");
+
     const alertClasses = [
       "alert-primary",
       "alert-secondary",
@@ -74,10 +75,11 @@ let addTask = (e) => {
           <i class="fa-solid delete  fa-trash-can text-danger float-end"></i>
           </div>
           `;
-    updateCounts();
+
     taskCounter++;
+    updateCounts();
     taskValue.value = "";
-    checkemptytasks();
+    checkEmptyTasks();
     Empty2();
   }
 };
@@ -133,7 +135,9 @@ function updateCounts() {
   const DoneCount = DoneTasks.length;
   const pendingCount = allTasks.length - DoneCount;
 
-  document.querySelector(".checkedNumber .Done").textContent = `Done: ${DoneCount}`;
+  document.querySelector(
+    ".checkedNumber .Done"
+  ).textContent = `Done: ${DoneCount}`;
   document.querySelector(
     ".checkedNumber .pending"
   ).textContent = `Pending: ${pendingCount}`;
@@ -143,6 +147,7 @@ updateCounts();
 function Empty2() {
   if (document.querySelectorAll(".task").length === 0) {
     document.querySelector(".checkedNumber .Done").textContent = "Done: 0";
-    document.querySelector(".checkedNumber .pending").textContent = "Pending: 0";
+    document.querySelector(".checkedNumber .pending").textContent =
+      "Pending: 0";
   }
 }
